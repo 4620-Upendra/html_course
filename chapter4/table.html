@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tables</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f7f7f7;
+}
+
+caption {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left;
+    display: block;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+td {
+    background-color: #fafafa;
+}
+
+td[colspan] {
+    font-style: italic;
+    background-color: #f0f8ff;
+}
+
+td[rowspan] {
+    font-weight: bold;
+    background-color: #e6f7ff;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #e0f7fa;
+}
+
+    </style>
+</head>
+
+<body>
+    <caption>coures learned by students</caption>
+    <table>
+        <tr>
+            <th>name</th>
+            <th>course_1</th>
+            <th>course_2</th>
+            <th>course_3</th>
+        </tr>
+        <tr>
+            <td>upendra</td>
+            <td>python</td>
+            <td>html</td>
+            <td>sql</td>
+        </tr>
+        <tr>
+            <td>komal</td>
+            <td>c</td>
+            <td colspan="2">web development</td>
+        </tr>
+        <tr>
+            <td>sai</td>
+            <td colspan="3">frontend</td>
+        </tr>
+        <tr>
+            <td rowspan="2">siva bro</td>
+            <td colspan="3" rowspan="2">html</td>
+        </tr>
+        <tr>
+            <td calspan=""></td>
+        </tr>
+        <tr>
+            <td>ashok</td>
+            <td colspan="2">python</td>
+            <td>java</td>
+        </tr>
+        <tr>
+            <td colspan="4">completed thank you</td>
+        </tr>
+    </table>
+</body>
+
+</html>

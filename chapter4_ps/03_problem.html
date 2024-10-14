@@ -1,0 +1,201 @@
+<!-- Create an HTML form for a travel website to book a vacation -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>travling from</title>
+   <style>
+    /* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Form styling */
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input fields and labels */
+label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+select:focus {
+    border-color: #ff4d4d;
+    outline: none;
+}
+
+/* Gender and dropdown styling */
+select {
+    background-color: #fff;
+    height: 40px;
+    font-size: 14px;
+}
+
+select:disabled {
+    color: #888;
+}
+
+/* Radio button payment options */
+caption {
+    font-weight: bold;
+    margin: 15px 0 5px;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+label[for="paytm"],
+label[for="BHIM"],
+label[for="google pay"],
+label[for="phonepe"],
+label[for="credit card"],
+label[for="Dedit card"] {
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+/* Submit button */
+button[type="submit"] {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #d73838;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    form {
+        padding: 20px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+}
+
+   </style>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="name">Name:</label>
+            <input id="name" type="text" placeholder="enter your Name" required>
+        </div>
+        <div>
+            <label for="phoneno">Phone number:</label>
+            <input id="phoneno" type="number" placeholder="enter your phone number" required>
+        </div>
+        <div>
+            <label for="age">Age</label>
+            <input id="age" type="number" placeholder="enter your Age" required>
+        </div>
+        <div>
+            <label for="Email">Email</label>
+            <input id="Email" type="email" placeholder="enter your email" required>
+        </div>
+        <div>
+            <label for="gender">Gender</label>
+            <select id="gender" required>
+                <option value="" disabled selected>select your Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Othere">Othere</option>
+            </select>
+        </div>
+        <span>
+            <label for="from">from</label>
+            <select id="from" required >
+                <option value="" disabled selected>select your starting point</option>
+                <option value="Mundai">Mundai</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Bengaluru">Bengaluru</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Kolkata">Kolkata</option>
+            </select>
+        </span>
+        <span>
+            <label for="to">To</label>
+            <select id="to" required >
+                <option value="" disabled selected>select your ending point</option>
+                <option value="Mundai">Mundai</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Bengaluru">Bengaluru</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Kolkata">Kolkata</option>
+            </select>
+        </span><br>
+        <caption>select mode of payment</caption>
+        <div>
+            
+            <input id="paytm" type="radio" required>
+            <label for="paytm">Paytm</label>
+
+            <input id="BHIM" type="radio" required>
+            <label for="BHIM">BHIM</label>
+
+            <input id="google pay" type="radio" required>
+            <label for="google pay">Google Pay</label>
+
+            <input id="phonepe" type="radio" required>
+            <label for="phonepe">Phonepe</label>
+
+            <input id="credit card" type="radio" required>
+            <label for="credit card">Credit Card</label>
+
+            <input id="Dedit card" type="radio" required>
+            <label for="Dedit card">Dedit card</label>
+
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+        
+    </form>
+    
+</body>
+</html>

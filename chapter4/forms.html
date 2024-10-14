@@ -1,0 +1,156 @@
+<!Doctype html>
+<html lan="eng">
+
+<head>
+    <title>forms in html</title>
+    <style>
+        /* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Styling for the form container */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Input and label styling */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Gender and subscription radio buttons */
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+label[for="basic"],
+label[for="premium"],
+label[for="VIP"] {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: normal;
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Button styling */
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Form div container styling */
+div {
+    margin-bottom: 15px;
+}
+
+/* Subscription plan title */
+p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+    </style>
+</head>
+
+<Body>
+    <forms action="/submit.php">
+        <div>
+            <label for="name">Name:</label>
+            <input id="name" type="text" placeholder="enter your name" required>
+        </div>
+        <div>
+            <label for="phonenumber">phone number:</label>
+            <input id="phonenumber" type="number" placeholder="enter your phone number" required="true">
+        </div>
+        <div>
+            <label for="Email">Email:</label>
+            <input id="Email" type="Email" placeholder="enter your Email" required>
+        </div>
+        <div>
+            <label for="password">password:</label>
+            <input id="password" type="password" placeholder="enter your password" required>
+        </div>
+        <div>
+            <label for="gender">Gender:</label>
+            <select id="gender" required>
+                <option value="" disabled selected>select your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="othere">Othere</option>
+            </select>
+        </div>
+        <div>
+            <label for="Dob">Date of Brith:</label>
+            <input id="DOb" type="date" placeholder="enter your Date of Brith" required>
+        </div>
+        <div>
+            <p>subscription plan</p>
+            <input id="basic" type="radio" name="subscription" value="basic"
+            <lable for="basic">Basic</lable>
+
+            <input id="premium" type="radio" name="subscription" value="premium"
+            <lable for="premium">Premium</lable>
+            
+            <input id="VIP" type="radio" name="subscription" value="VIP"
+            <lable for="VIP">VIP</lable>
+            
+        </div>
+        <div>
+            <input id="terms" type="checkbox" required>
+            <label for="terms">I agree to the terms and condition</label>    
+        </div>
+        <div>
+            <label for="comment" >Comment</label>
+            <textarea id="comment" type="text" placeholder="enter your comments" rows="3"></textarea>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </forms>
+</Body>
+
+</html>
